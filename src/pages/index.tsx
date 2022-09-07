@@ -5,7 +5,9 @@ import Image from 'next/image'
 import { Carousel } from '@/components/carousel'
 
 import styles from './styles.module.scss'
-import { PlaceCard } from '@/components/place-card'
+import { PlaceCard } from './components/place-card'
+import { EventCard } from './components/event-card'
+import { SliderCard } from './components/slider-card'
 
 const places = [ 
   {
@@ -40,6 +42,62 @@ const places = [
   }
 ]
 
+const events = [ 
+  {
+    id: 1,
+    name: 'Reunião Grande',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 2,
+    name: 'Sala verde',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 3,
+    name: 'Espaço Kids',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 4,
+    name: 'Estúdio de Gravação',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 5,
+    name: 'Better together',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  }
+]
+
+const sliders = [ 
+  {
+    id: 1,
+    img: 'imagem',
+  },
+  {
+    id: 2,
+    img: 'imagem',
+  },
+  {
+    id: 3,
+    img: 'imagem',
+  },
+  {
+    id: 4,
+    img: 'imagem',
+  },
+  {
+    id: 5,
+    img: 'imagem',
+  }
+]
+
 const Home: NextPage = () => {
 
   return (
@@ -54,12 +112,25 @@ const Home: NextPage = () => {
         <div className={styles.logo}>
 
         </div>
-        {/* <OwlCarousel
-          dots={false}
-          loop
-        >
-          <div className={styles.card}>teste</div>
-        </OwlCarousel> */}
+        <div className={styles.sliders}>
+          <Carousel
+            animateOut= 'slideOutDown'
+            animateIn= 'flipInX'
+            items={1}
+            dots={false}
+            autoplay={false}
+            autoplayTimeout={2000}
+            autoplaySpeed={2000}
+            autoplayHoverPause={false}
+          >
+            {sliders.map(slider => (
+              <SliderCard 
+                key={slider.id}
+                img={slider.img}
+              />
+            ))}
+          </Carousel>
+        </div>
         <div className={styles.places}>
           <h2>Nossos espaços</h2>
             <Carousel
@@ -84,6 +155,37 @@ const Home: NextPage = () => {
         </div>
         <div className={styles.events}>
           <h2>Próximos eventos</h2>
+          <div className={styles['events__container']}>
+            <div className={styles['events__container__description']}>
+              <h1>Evento teste</h1>
+              <p> 
+                Espaços preparados para receber seu evento da melhor maneira possivel, 
+                possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber 
+                você e suas colegas de trabalho!
+              </p>
+            </div>
+            <div className={styles['events__container__carousel']}>
+              <Carousel
+                animateOut= 'slideOutDown'
+                animateIn= 'flipInX'
+                items={1}
+                dots={false}
+                nav={true}
+                autoplay={false}
+                autoplayTimeout={2000}
+                autoplaySpeed={2000}
+                autoplayHoverPause={false}
+                navClass={['navigation-previous', 'navigation-next']}
+              >
+                {events.map(event => (
+                  <EventCard 
+                    key={event.id}
+                    img={event.img}
+                  />
+                ))}
+              </Carousel>
+            </div>
+          </div>
         </div>
         <div className={styles.about}>
           <h2>Sobre nós</h2>
