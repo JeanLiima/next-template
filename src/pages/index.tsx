@@ -1,9 +1,47 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+
+import { Carousel } from '@/components/carousel'
+
+import styles from './styles.module.scss'
+import { PlaceCard } from '@/components/place-card'
+
+const places = [ 
+  {
+    id: 1,
+    name: 'Reunião Grande',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 2,
+    name: 'Sala verde',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 3,
+    name: 'Espaço Kids',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 4,
+    name: 'Estúdio de Gravação',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  },
+  {
+    id: 5,
+    name: 'Better together',
+    img: 'imagem',
+    description: 'Sala de reunião  preparadas  para receber apresentações.',
+  }
+]
 
 const Home: NextPage = () => {
+
   return (
     <div className={styles.container}>
       <Head>
@@ -12,58 +50,48 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <main className={styles.main}>  
+        <div className={styles.logo}>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
-        </p>
+        </div>
+        {/* <OwlCarousel
+          dots={false}
+          loop
+        >
+          <div className={styles.card}>teste</div>
+        </OwlCarousel> */}
+        <div className={styles.places}>
+          <h2>Nossos espaços</h2>
+            <Carousel
+              dots={false}
+              nav={false}
+              autoplay={false}
+              autoplayTimeout={2000}
+              autoplaySpeed={2000}
+              autoplayHoverPause={false}
+              margin={60}
+              autoWidth
+            >
+              {places.map(place => (
+                <PlaceCard 
+                  key={place.id}
+                  name={place.name}
+                  img={place.img}
+                  description={place.description}
+                />
+              ))}
+            </Carousel>
+        </div>
+        <div className={styles.events}>
+          <h2>Próximos eventos</h2>
+        </div>
+        <div className={styles.about}>
+          <h2>Sobre nós</h2>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
       </footer>
     </div>
   )
