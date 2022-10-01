@@ -20,7 +20,6 @@ const EventsCarousel = () => (
         navContainerClass={styles.navigation}
         stageOuterClass={styles['carousel__stage-outer']}
         margin={100}
-        
     >
         {eventCarouselItems.map(event => (
             <EventCard 

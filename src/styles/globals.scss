@@ -55,6 +55,15 @@ h3 {
   float: right;
 }
 
+.disabled {
+  background: #e5e5e5 !important;
+  cursor: not-allowed;
+
+  span {
+    color: #9b9b9b
+  }
+}
+
 
 @media (prefers-color-scheme: dark) {
   html {
