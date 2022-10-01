@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import OccriIcon from 'assets/brand/occri-icon.svg'
 
+import { Button } from '../button'
+
 import styles from './styles.module.scss'
 
 const Footer = () => (
@@ -26,13 +28,13 @@ const Footer = () => (
                 <p> 55 99889-9988</p> 
             </div>
             <div>
-                <h4>Faça já sua reserva</h4>
-                <button>
+                <h4>Faça já sua reserva!</h4>   
+                <Button>
                     Reservar
-                </button>       
+                </Button>       
             </div>
         </div>
-        <Image src={OccriIcon} alt='Occri Icon' />
+        <div className={styles['footer__image']}/>
     </footer>
 )
 

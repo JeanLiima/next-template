@@ -1,4 +1,5 @@
 import Event1 from 'assets/event-carousel/event-1.svg'
+import Event2 from 'assets/event-carousel/event-2.svg'
 
 const eventCarouselItems = [ 
     {
@@ -11,7 +12,7 @@ const eventCarouselItems = [
     {
       id: 2,
       name: 'Sala verde',
-      img: Event1,
+      img: Event2,
       alt: '',
       description: 'Sala de reunião  preparadas  para receber apresentações.',
     },
@@ -25,7 +26,7 @@ const eventCarouselItems = [
     {
       id: 4,
       name: 'Estúdio de Gravação',
-      img: Event1,
+      img: Event2,
       alt: '',
       description: 'Sala de reunião  preparadas  para receber apresentações.',
     },

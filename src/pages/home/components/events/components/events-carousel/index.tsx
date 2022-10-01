@@ -3,7 +3,9 @@ import { Carousel } from 'components/carousel'
 import { EventCard } from './components/event-card'
 import { eventCarouselItems } from './constants'
 
-const EventCarousel = () => (
+import styles from './styles.module.scss'
+
+const EventsCarousel = () => (
     <Carousel
         animateOut= 'slideOutDown'
         animateIn= 'flipInX'
@@ -14,7 +16,11 @@ const EventCarousel = () => (
         autoplayTimeout={2000}
         autoplaySpeed={2000}
         autoplayHoverPause={false}
-        navClass={['navigation-previous', 'navigation-next']}
+        navClass={[styles['navigation-previous'], styles['navigation-next']]}
+        navContainerClass={styles.navigation}
+        stageOuterClass={styles['carousel__stage-outer']}
+        margin={100}
+        
     >
         {eventCarouselItems.map(event => (
             <EventCard 
@@ -26,4 +32,4 @@ const EventCarousel = () => (
     </Carousel>
 )
 
-export { EventCarousel }
+export { EventsCarousel }

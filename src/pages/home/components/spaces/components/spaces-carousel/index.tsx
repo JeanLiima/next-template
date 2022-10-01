@@ -3,9 +3,7 @@ import { Carousel } from 'components/carousel'
 import { SpaceCard } from './components/space-card'
 import { spaceCarouselItems } from './constants'
 
-import styles from './styles.module.scss'
-
-const SpaceCarousel = () => (
+const SpacesCarousel = () => (
     <Carousel
         dots={false}
         nav={false}
@@ -28,4 +26,4 @@ const SpaceCarousel = () => (
     </Carousel>
 )
 
-export { SpaceCarousel }
+export { SpacesCarousel }

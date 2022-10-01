@@ -32,12 +32,24 @@ $bg-color--dark: #806666;
             margin: 0;
             margin-bottom: 24px;
         }
+
         p {
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
             color: #FDFDFD;
+            margin-bottom: 24px;
         }
+    }
+
+    &__image {
+        height: 100%;
+        width: 93px;
+        background: url(../../assets/brand/occri-icon.svg) no-repeat;
+        -webkit-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
     }
 }

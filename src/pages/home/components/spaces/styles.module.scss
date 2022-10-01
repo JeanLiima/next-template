@@ -1,0 +1,13 @@
+.spaces {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    
+    padding: 42px 0px 42px 72px;
+  
+    h2 {
+      margin-bottom: 54px;
+    }
+  }
