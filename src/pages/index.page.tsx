@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import Home from './home'
+import Home from './home/index.page'
 
 const Default: NextPage = () => (
   <Home/>
