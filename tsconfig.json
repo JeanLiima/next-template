@@ -4,13 +4,13 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "baseUrl": "./src/",
     "paths": {
-      "@/components/*": [
+      "components/*": [
         "components/*"
       ],
-      "@/styles/*": [
+      "styles/*": [
         "styles/*"
       ],
-      "@/assets/*": [
+      "assets/*": [
         "assets/*"
       ],
     },

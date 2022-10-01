@@ -2,101 +2,15 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Carousel } from '@/components/carousel'
+import OccriLogo from 'assets/brand/occri-logo.svg'
+import OccriCompleteLogo from 'assets/brand/occri-complete-logo.svg'
+
+import { InitialCarousel } from './components/initial-carousel'
+import { SpaceCarousel } from './components/space-carousel'
+import { EventCarousel } from './components/event-carousel'
+import { Footer } from './components/footer'
 
 import styles from './styles.module.scss'
-import { PlaceCard } from './components/place-card'
-import { EventCard } from './components/event-card'
-import { SliderCard } from './components/slider-card'
-
-const places = [ 
-  {
-    id: 1,
-    name: 'Reunião Grande',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 2,
-    name: 'Sala verde',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 3,
-    name: 'Espaço Kids',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 4,
-    name: 'Estúdio de Gravação',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 5,
-    name: 'Better together',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  }
-]
-
-const events = [ 
-  {
-    id: 1,
-    name: 'Reunião Grande',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 2,
-    name: 'Sala verde',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 3,
-    name: 'Espaço Kids',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 4,
-    name: 'Estúdio de Gravação',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  },
-  {
-    id: 5,
-    name: 'Better together',
-    img: 'imagem',
-    description: 'Sala de reunião  preparadas  para receber apresentações.',
-  }
-]
-
-const sliders = [ 
-  {
-    id: 1,
-    img: 'imagem',
-  },
-  {
-    id: 2,
-    img: 'imagem',
-  },
-  {
-    id: 3,
-    img: 'imagem',
-  },
-  {
-    id: 4,
-    img: 'imagem',
-  },
-  {
-    id: 5,
-    img: 'imagem',
-  }
-]
 
 const Home: NextPage = () => {
 
@@ -110,48 +24,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>  
         <div className={styles.logo}>
-
+          <Image src={OccriLogo} alt='Occri logo'/>
         </div>
         <div className={styles.sliders}>
-          <Carousel
-            animateOut= 'slideOutDown'
-            animateIn= 'flipInX'
-            items={1}
-            dots={false}
-            autoplay={false}
-            autoplayTimeout={2000}
-            autoplaySpeed={2000}
-            autoplayHoverPause={false}
-          >
-            {sliders.map(slider => (
-              <SliderCard 
-                key={slider.id}
-                img={slider.img}
-              />
-            ))}
-          </Carousel>
+          <InitialCarousel />
         </div>
-        <div className={styles.places}>
+        <div className={styles.spaces}>
           <h2>Nossos espaços</h2>
-            <Carousel
-              dots={false}
-              nav={false}
-              autoplay={false}
-              autoplayTimeout={2000}
-              autoplaySpeed={2000}
-              autoplayHoverPause={false}
-              margin={60}
-              autoWidth
-            >
-              {places.map(place => (
-                <PlaceCard 
-                  key={place.id}
-                  name={place.name}
-                  img={place.img}
-                  description={place.description}
-                />
-              ))}
-            </Carousel>
+            <SpaceCarousel />
         </div>
         <div className={styles.events}>
           <h2>Próximos eventos</h2>
@@ -165,36 +45,37 @@ const Home: NextPage = () => {
               </p>
             </div>
             <div className={styles['events__container__carousel']}>
-              <Carousel
-                animateOut= 'slideOutDown'
-                animateIn= 'flipInX'
-                items={1}
-                dots={false}
-                nav={true}
-                autoplay={false}
-                autoplayTimeout={2000}
-                autoplaySpeed={2000}
-                autoplayHoverPause={false}
-                navClass={['navigation-previous', 'navigation-next']}
-              >
-                {events.map(event => (
-                  <EventCard 
-                    key={event.id}
-                    img={event.img}
-                  />
-                ))}
-              </Carousel>
+              <EventCarousel />
+            </div>
+          </div>
+          <div className={styles['events__advert']}>
+            <div className={styles['events__advert__content']}>
+              <h2>Faça seu evento conosco!</h2>
+              <p>
+                Espaços preparados para receber seu evento da melhor maneira possivel, possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber você e suas colegas de trabalho!
+              </p>
+            </div>
+            <div className={styles['events__advert__button']}>
+              <button>
+                Datas disponiveis
+              </button>
             </div>
           </div>
         </div>
         <div className={styles.about}>
-          <h2>Sobre nós</h2>
-
+          <div className={styles['about__content']}>
+            <h2>Sobre nós</h2>
+            <h3>Olá, somos a OCCRI</h3>
+            <p>
+            Mais do que um espaço compartilhado, a Occri é um complexo totalmente pensado e elaborado para criar uma experiencia única e diferenciada, contanto com diversos setores dentro do mesmo local: bar, restaurante, espaço kids, área de eventos e muito mais. Tem como propósito empoderar mulheres a serem protagonistas das suas próprias histórias, criando um ambiente acolhedor e possibilitador.
+            </p>
+          </div>
+          <div>
+            <Image src={OccriCompleteLogo} alt="Logo completo com texto coworking multissetorial feminino" />
+          </div>
         </div>
       </main>
-
-      <footer className={styles.footer}>
-      </footer>
+      <Footer />
     </div>
   )
 }
