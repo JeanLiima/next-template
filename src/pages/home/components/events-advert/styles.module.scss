@@ -15,7 +15,7 @@
     &__description {
         padding: 24px 88px;
   
-        h2 {
+        > h2 {
           font-family: 'Poppins';
           font-style: normal;
           font-weight: 500;
@@ -24,14 +24,17 @@
           
           color: #2E2E2E;
           margin: 0;
+          margin-bottom: 16px;
         }
         
-        p {
+        > p {
+          font-family: sans-serif;
           font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 155%;
           color: #595959;
+          margin: 0;
         }
     }
     &__button {

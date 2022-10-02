@@ -19,35 +19,37 @@
             flex-wrap: nowrap;
             align-self: center;
 
-            h2 {
+            > h2 {
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 24px;
                 line-height: 137%;
                 color: #806666;
-        
+                margin: 0;
                 margin-bottom: 40px;
             }
         
-            h3 {
+            > h3 {
                 font-family: 'Poppins';
                 font-style: normal;
                 font-weight: 500;
                 font-size: 32px;
                 line-height: 137%;
                 color: #2E2E2E;
-        
+                margin: 0;
                 margin-bottom: 16px;
             }
         
-            p {
+            > p {
+                font-family: sans-serif;
                 width: 413px;
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 150%;
                 color: #737373;
+                margin: 0;
             }
         }
 

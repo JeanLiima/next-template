@@ -9,7 +9,7 @@ const Events = () => {
             <h2>Próximos eventos</h2>
             <div className={styles['events__container']}>
               <div className={styles['events__container__description']}>
-                <h1>Evento teste</h1>
+                <h2>Evento teste</h2>
                 <p> 
                   Espaços preparados para receber seu evento da melhor maneira possivel, 
                   possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber 

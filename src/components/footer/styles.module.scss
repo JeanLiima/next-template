@@ -34,11 +34,13 @@ $bg-color--dark: #806666;
         }
 
         p {
+            font-family: sans-serif;
             font-style: normal;
             font-weight: 400;
             font-size: 18px;
             line-height: 150%;
             color: #FDFDFD;
+            margin: 0;
             margin-bottom: 24px;
         }
     }
