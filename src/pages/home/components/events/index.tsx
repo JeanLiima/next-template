@@ -11,7 +11,7 @@ const Events = () => {
             <div className={styles['events__container']}>
               <div className={styles['events__container__description']}>
                 <div>
-                  <h2>Evento teste</h2>
+                  <h1>Evento teste</h1>
                   <p> 
                     Espaços preparados para receber seu evento da melhor maneira possivel, 
                     possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber 

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -15,6 +16,10 @@ import { About } from './components/about'
 import styles from './styles.module.scss'
 
 const Home: NextPage = () => {
+  useEffect(() =>
+  {        
+    document.body.classList.add(styles['body-container']);
+  }, []);
 
   return (
     <div className={styles.container}>

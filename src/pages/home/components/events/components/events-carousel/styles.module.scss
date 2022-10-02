@@ -6,7 +6,7 @@ $bg-color--dark: #806666;
     width: 100%;
     
     &__stage-outer {
-        overflow-x: hidden;
+        overflow: hidden;
         padding-bottom: 10px;
         padding-left: 20px;
 
@@ -23,36 +23,47 @@ $bg-color--dark: #806666;
     position: absolute;
     top: 37%;
 
-    .navigation-previous,
-    .navigation-next {
-        border-radius: 50%;
-        background: $bg-color--lightest;
-        border: none;
-        box-shadow: 0px 1px 2px rgba(231, 232, 239, 0.3), 0px 2px 6px 2px rgba(159, 161, 164, 0.15);
-        width: 60px;
-        height: 60px;
-        padding: 0;
-        padding-bottom: 2px;
+    > button {
+        &.navigation-previous,
+        &.navigation-next {
+            border-radius: 50%;
+            background: $bg-color--lightest;
+            border: none;
+            box-shadow: 0px 1px 2px rgba(231, 232, 239, 0.3), 0px 2px 6px 2px rgba(159, 161, 164, 0.15);
+            width: 60px;
+            height: 60px;
+            padding: 0;
+            padding-bottom: 2px;
 
-        span {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 25px;
-            width: 100%;
-            height: 100%;
+            > span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 25px;
+                width: 100%;
+                height: 100%;
+            }
+
+            &:hover {
+                background: $bg-color--medium;
+            }
         }
 
-        &:hover {
-            background: $bg-color--medium;
+        &.navigation-next {
+            padding-left: 3px;
         }
-    }
+        
+        &.navigation-previous {
+            padding-right: 3px;
+        }
 
-    .navigation-next {
-        padding-left: 3px;
-    }
-    
-    .navigation-previous {
-        padding-right: 3px;
+        &.disabled {
+            background: #e5e5e5 !important;
+            cursor: not-allowed;
+        }
+        
+        &.disabled > span {
+            color: #9b9b9b
+        }
     }
 }
