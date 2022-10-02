@@ -26,10 +26,14 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>  
         <div className={styles.logo}>
-          <Image src={OccriLogo} alt='Occri logo'/>
+          <div className={styles['logo__content']}>
+            <Image src={OccriLogo} alt='Occri logo'/>
+          </div>
         </div>
         <div className={styles.sliders}>
-          <InitialCarousel />
+          <div className={styles['sliders__content']}>
+            <InitialCarousel />
+          </div>
         </div>
         <Spaces />
         <Events />

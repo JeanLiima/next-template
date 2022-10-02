@@ -3,31 +3,37 @@
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
-  
-    padding: 42px;
-  
-    h2 {
-        margin-bottom: 40px;
-    }
-  
-    &__container {
+
+    &__content {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: nowrap;
-        gap: 57px;
+
+        padding: 42px;
     
-        width: 100%;
-    
-        &__description {
-            width: 40%;
-    
-            h1 {
-            color:#474747;
-            }
+        h2 {
+            margin-bottom: 40px;
         }
+    
+        &__container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 57px;
         
-        &__carousel {
-            width: 60%;
+            width: 100%;
+        
+            &__description {
+                width: 40%;
+        
+                h1 {
+                color:#474747;
+                }
+            }
+            
+            &__carousel {
+                width: 60%;
+            }
         }
     }
 }

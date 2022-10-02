@@ -4,10 +4,17 @@
     flex-direction: column;
     flex-wrap: nowrap;
     width: 100%;
+
+    &__content {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
     
-    padding: 42px 0px 42px 72px;
-  
-    h2 {
-      margin-bottom: 54px;
+      padding: 42px 0px 42px 72px;
+    
+      h2 {
+        margin-bottom: 54px;
+      }
     }
   }
