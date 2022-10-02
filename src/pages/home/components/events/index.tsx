@@ -1,3 +1,4 @@
+import { Button } from 'components/button';
 import { EventsCarousel } from './components/events-carousel';
 
 import styles from './styles.module.scss'
@@ -9,12 +10,17 @@ const Events = () => {
             <h2>Próximos eventos</h2>
             <div className={styles['events__container']}>
               <div className={styles['events__container__description']}>
-                <h2>Evento teste</h2>
-                <p> 
-                  Espaços preparados para receber seu evento da melhor maneira possivel, 
-                  possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber 
-                  você e suas colegas de trabalho!
-                </p>
+                <div>
+                  <h2>Evento teste</h2>
+                  <p> 
+                    Espaços preparados para receber seu evento da melhor maneira possivel, 
+                    possuimos bar, restaurante, espaço KIDS e toda uma estrutura pronta para receber 
+                    você e suas colegas de trabalho!
+                  </p>
+                </div>
+                <Button color='secondary'>
+                  Entre em contato
+                </Button>
               </div>
               <div className={styles['events__container__carousel']}>
                 <EventsCarousel />
