@@ -21,6 +21,7 @@ const SpacesCarousel = () => (
                 img={space.img}
                 alt={space.alt}
                 description={space.description}
+                quantity={20}
             />
         ))}
     </Carousel>
