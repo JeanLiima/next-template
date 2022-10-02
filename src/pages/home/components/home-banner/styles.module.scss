@@ -1,0 +1,14 @@
+.home-banner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  
+    width: 100%;
+  
+    &__content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      padding: 42px 72px;
+    }
+  }

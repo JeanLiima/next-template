@@ -5,8 +5,7 @@ import Image from 'next/image'
 
 import OccriLogo from 'assets/brand/occri-logo.svg'
 
-import { InitialCarousel } from './components/initial-carousel'
-
+import { HomeBanner } from './components/home-banner'
 import { Spaces } from './components/spaces'
 import { Events } from './components/events'
 import { EventsAdvert } from './components/events-advert'
@@ -35,11 +34,7 @@ const Home: NextPage = () => {
             <Image src={OccriLogo} alt='Occri logo'/>
           </div>
         </div>
-        <div className={styles.sliders}>
-          <div className={styles['sliders__content']}>
-            <InitialCarousel />
-          </div>
-        </div>
+        <HomeBanner />
         <Spaces />
         <Events />
         <EventsAdvert/>
