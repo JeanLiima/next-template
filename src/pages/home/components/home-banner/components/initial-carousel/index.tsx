@@ -13,7 +13,7 @@ const InitialCarousel = () => (
         autoplayTimeout={2000}
         autoplaySpeed={2000}
         autoplayHoverPause={false}
-        margin={150}
+        margin={50}
     >
         {initialCarouselItems.map(item => (
             <SliderCard 
