@@ -1,6 +1,4 @@
-import Image from 'next/image'
-import OccriIcon from 'assets/brand/occri-icon.svg'
-
+import { FaInstagram, FaFacebookSquare, FaWhatsapp } from 'react-icons/fa'
 import { Button } from '../button'
 
 import styles from './styles.module.scss'
@@ -18,14 +16,23 @@ const Footer = () => (
             </div>
             <div>
                 <h4>Rede sociais</h4>
-                <p> @occriteste</p> 
-                <p> @occriteste</p>             
+                <p> <FaInstagram/> @occriteste</p> 
+                <p> <FaFacebookSquare /> @occriteste</p>             
             </div>
             <div>
                 <h4>Contatos</h4>
-                <p> 55 99889-9988</p>
-                <p> 55 99889-9988</p> 
-                <p> 55 99889-9988</p> 
+                <p> 
+                    <FaWhatsapp /> 
+                    55 99889-9988
+                </p>
+                <p> 
+                    <FaWhatsapp /> 
+                    55 99889-9988
+                </p>
+                <p> 
+                    <FaWhatsapp /> 
+                    55 99889-9988
+                </p>
             </div>
             <div>
                 <h4>Faça já sua reserva!</h4>   

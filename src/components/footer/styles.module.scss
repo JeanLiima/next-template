@@ -16,11 +16,11 @@ $bg-color--dark: #806666;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        height: auto;
+        height: 100%;
         width: 100%;
 
-        justify-content: space-between;
-        padding: 54px 104px 54px 72px;
+        justify-content: space-around;
+        padding: 54px 60px 54px 72px;
 
         h4 {
             font-family: 'Poppins';
@@ -42,6 +42,11 @@ $bg-color--dark: #806666;
             color: #FDFDFD;
             margin: 0;
             margin-bottom: 24px;
+
+            > svg {
+                vertical-align: middle;
+                margin-right: 8px;
+            }
         }
     }
 
