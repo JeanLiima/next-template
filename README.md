@@ -37,6 +37,6 @@ npm run test
 yarn test
 ```
 
-✒️ Devs
+## Devs
 - Backend - [Evaldo R Cardoso](https://evaldorc.com.br/)
 - Frontend - [Jean Lima](http://jean.dev.com.br/)
