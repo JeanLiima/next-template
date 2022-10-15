@@ -9,7 +9,7 @@
   
 ## Description
 
-This is the front-end part of the project OCCRI System.    
+✔ Frontend: This is the front-end part of the project OCCRI System.    
 ✔ Backend: [Occri API](https://github.com/evaldorcardoso/api-occri)
 
 🛠️ Technologies:
