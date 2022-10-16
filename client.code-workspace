@@ -1,0 +1,26 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		//EDITOR
+		"editor.tabSize": 4, 
+		"editor.fontSize": 14,
+		"editor.lineHeight": 18,
+		//ESLINT
+		"eslint.validate": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact"
+		],
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": true
+		},
+		"files.autoSave": "afterDelay",
+		"eslint.alwaysShowStatus": true,
+		"eslint.format.enable": true,
+	},
+}
