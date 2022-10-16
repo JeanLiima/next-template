@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 import styles from './styles.module.scss'
 
-interface SliderCardProps {
+interface ISliderCard {
     img: {
         src: string,
         width: number,
@@ -12,7 +12,7 @@ interface SliderCardProps {
     alt: string,
 }
 
-const SliderCard = ({img, alt}: SliderCardProps) => (
+const SliderCard = ({img, alt}: ISliderCard) => (
     <div className={styles['slider-card']}>
         <div 
             className={styles['slider-card__image']}

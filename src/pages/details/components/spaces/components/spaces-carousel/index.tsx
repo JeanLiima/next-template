@@ -1,9 +1,18 @@
 import { Carousel } from 'components/carousel'
 
 import { SpaceCard } from './components/space-card'
-import { spaceCarouselItems } from './constants'
 
-const SpacesCarousel = () => (
+interface ISpace {
+    uuid: string,
+    name: string,
+    description: string,
+};
+
+interface ISpaces {
+    list: Array<ISpace>
+}
+    
+const SpacesCarousel = ({ list }: ISpaces) => (
     <Carousel
         dots={false}
         nav={false}
@@ -14,16 +23,19 @@ const SpacesCarousel = () => (
         margin={60}
         autoWidth
     >
-        {spaceCarouselItems.map(space => (
+        {list?.map(space => {
+            console.log(space)
+            return (
             <SpaceCard 
-                key={space.id}
+                key={space.uuid}
+                id={space.uuid}
                 name={space.name}
-                img={space.img}
-                alt={space.alt}
+                // img={space.img}
+                // alt={space.alt}
                 description={space.description}
                 quantity={20}
             />
-        ))}
+        )})}
     </Carousel>
 )
 

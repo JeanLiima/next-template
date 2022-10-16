@@ -1,24 +1,22 @@
 import { useEffect } from 'react'
-import type { NextPage } from 'next'
+
+import type { NextPage as INextPage} from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
 import OccriLogo from 'assets/brand/occri-logo.svg'
+import { Footer } from 'components/footer'
 
 import { HomeBanner } from './components/home-banner'
 import { Spaces } from './components/spaces'
 import { Events } from './components/events'
 import { EventsAdvert } from './components/events-advert'
-import { Footer } from '../../components/footer'
 import { About } from './components/about'
 
 import styles from './styles.module.scss'
 
-const Home: NextPage = () => {
-  useEffect(() =>
-  {        
-    document.body.classList.add(styles['body-container']);
-  }, []);
+const Home: INextPage = () => {
+  useEffect(() =>  {document.body.classList.add(styles['body-container'])}, []);
 
   return (
     <div className={styles.container}>
@@ -31,7 +29,9 @@ const Home: NextPage = () => {
       <main className={styles.main}>  
         <div className={styles.logo}>
           <div className={styles['logo__content']}>
-            <Image src={OccriLogo} alt='Occri logo'/>
+            <a href='/'>
+              <Image src={OccriLogo} alt='Occri logo' />
+            </a>
           </div>
         </div>
         <HomeBanner />
