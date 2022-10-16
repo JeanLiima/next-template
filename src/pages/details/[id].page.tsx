@@ -27,7 +27,7 @@ const Details: INextPage = () => {
 	const [space, setSpace] = useState<ISpace | undefined>(undefined);
 
 	const router = useRouter();
-	const { id } = router?.query;
+	const { id } = router?.query || null;
 
 	const redirectToHome = useCallback(
 		() => {

@@ -15,7 +15,7 @@ interface ISpace {
 const Spaces = () => {
 	const [spaces, setSpaces] = useState([]);
 	const router = useRouter();
-	const { id } = router?.query;
+	const { id } = router?.query || null;
 
 	useEffect(() => {
 		const fetchSpace = async () => {
