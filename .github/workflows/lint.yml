@@ -32,5 +32,6 @@ jobs:
       - name: Run linter
         uses: wearerequired/lint-action@v2
         with:
+          _dir: src/
           eslint: true
           auto_fix: true
