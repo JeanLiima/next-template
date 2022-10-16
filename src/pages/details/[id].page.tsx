@@ -1,5 +1,4 @@
 import { useEffect, useState, useCallback } from 'react'
-import { HiOutlineUserGroup } from 'react-icons/hi'
 
 import type { NextPage as INextPage } from 'next'
 import { useRouter } from 'next/router'
@@ -7,17 +6,22 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import OccriLogo from 'assets/brand/occri-logo.svg'
+import Example1 from 'assets/initial-carousel/example-banner-1.svg'
 import { Footer } from 'components/footer'
+
 import { spacesApi } from 'pages/api'
 
 import { Spaces } from './components/spaces'
 import styles from './styles.module.scss'
+import { DetailsDescription } from './components/details-description'
 
 interface ISpace {
   uuid: string,
   name: string,
   description: string,
   quantity: number,
+  img: string,
+  alt: string,
 }
 
 const Details: INextPage = () => {
@@ -53,9 +57,7 @@ const Details: INextPage = () => {
       
     fetchSpace();
   }, [id, setSpace, redirectToHome]);
-
-  console.log(space)
-
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -73,20 +75,22 @@ const Details: INextPage = () => {
           </div>
         </div>
         <div className={styles.details}>
+            <h2>Reserva </h2>
             <div className={styles['details__content']}>
-                <h2>Reserva </h2>
                 <div className={styles['details__content__carousel']}>
-                  {/* carousel or image */}
+                  <div 
+                      className={styles['details__content__carousel__image']}
+                      style={{ backgroundImage: 'url("/_next/static/media/example-banner-1.06a3b79f.svg")' }}
+                  />
                 </div>
                 <div className={styles['details__content__description']}>
-                  <h1>{space?.name}</h1>
-                  <p>{space?.description}</p>
-                  <div className={styles['details__content__description__quantity']}>
-                    <div className={styles['details__content__description__quantity__icon']}>
-                        <HiOutlineUserGroup/> 
-                    </div>
-                    {space?.quantity}
-                  </div>
+                  {space && (
+                    <DetailsDescription 
+                      name={space.name}
+                      description={space.description}
+                      quantity={space.quantity}
+                    />
+                  )}
                 </div>
             </div>
         </div>
