@@ -1,25 +1,27 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 import { HiOutlineUserGroup, HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 import styles from './styles.module.scss'
 
-interface SpaceCardProps {
-    name: String,
-    img: {
-        src: string,
-        width: number,
-        height: number,
-    },
-    alt: string,
-    description: String,
+interface ISpaceCard {
+    id: string,
+    name: string,
+    // img: {
+    //     src: string,
+    //     width: number,
+    //     height: number,
+    // },
+    // alt: string,
+    description: string,
     quantity: number,
 }
 
-const SpaceCard = ({name, img, alt, description, quantity}: SpaceCardProps) => (
+const SpaceCard = ({id, name, description, quantity}: ISpaceCard) => (
     <div className={styles['place-card']}>
         <div className={styles['place-card__image']}>
-            <Image src={img.src} width={img.width} height={img.height} alt={alt}/>
+            {/* <Image src={img.src} width={img.width} height={img.height} alt={alt}/> */}
         </div>
         <div className={styles['place-card__description']}>
             <h2>{name}</h2>
@@ -33,7 +35,7 @@ const SpaceCard = ({name, img, alt, description, quantity}: SpaceCardProps) => (
                     </div>
                     {quantity}
                 </div>
-                <a>
+                <a href={`/details/${id}`}>
                     reservar
                     <HiOutlineArrowNarrowRight/>
                 </a>

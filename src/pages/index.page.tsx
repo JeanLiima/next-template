@@ -1,7 +1,7 @@
-import type { NextPage } from 'next'
+import type { NextPage as INextPage } from 'next'
 import Home from './home/index.page'
 
-const Default: NextPage = () => (
+const Default: INextPage = () => (
   <Home/>
 );
 
