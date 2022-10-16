@@ -4,8 +4,8 @@
         "commonjs": true,
         "es2021": true
     },
-    "extends": [
-        "airbnb-base",
+    "extends": [ 
+        "next",
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
@@ -14,13 +14,16 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": "latest"
+        "ecmaVersion": "latest",
+        "project": ["./tsconfig.json"]
     },
     "plugins": [
         "react",
         "@typescript-eslint"
     ],
     "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
         "indent": [
             "error",
             "tab"
@@ -36,6 +39,12 @@
         "semi": [
             "error",
             "always"
+        ],
+        "no-console": [
+            "error", 
+            {
+                "allow": ["warn", "error"] 
+            }
         ]
     }
 }
