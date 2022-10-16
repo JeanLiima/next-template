@@ -33,5 +33,5 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          eslint_dir: src/
+          eslint_dir: ./src/
           auto_fix: true
