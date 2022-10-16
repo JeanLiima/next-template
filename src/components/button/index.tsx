@@ -7,12 +7,12 @@ const defaultProps = {
     color: "primary",
 }
 
-interface ButtonProps {
+interface IButton {
     children: String,
     color: 'primary' | 'secondary'
 }
 
-const Button = ({children, color}: ButtonProps) => {
+const Button = ({children, color}: IButton) => {
     return (
         <button 
             className={classNames(
