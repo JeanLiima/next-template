@@ -33,5 +33,6 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          eslint_dir: ./src/
+          extensions: 'ts,tsx'
+          annotations: true
           auto_fix: true
