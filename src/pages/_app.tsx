@@ -1,8 +1,8 @@
-import type { AppProps } from 'next/app'
-import '../styles/styles.css'
+import type { AppProps } from "next/app";
+import "../styles/styles.css";
 
 const App = ({ Component, pageProps }: AppProps) => {
-  return <Component {...pageProps} />
-}
+	return <Component {...pageProps} />;
+};
 
-export default App
+export default App;

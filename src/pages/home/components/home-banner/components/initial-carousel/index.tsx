@@ -1,28 +1,27 @@
-import { Carousel } from 'components/carousel'
+import { Carousel } from "components/carousel";
 
-import { SliderCard } from './components/slider-card'
-import { initialCarouselItems } from './constants'
+import { SliderCard } from "./components/slider-card";
+import { initialCarouselItems } from "./constants";
 
 const InitialCarousel = () => (
-    <Carousel
-        animateOut= 'slideOutDown'
-        animateIn= 'flipInX'
-        items={1}
-        dots={false}
-        autoplay={false}
-        autoplayTimeout={2000}
-        autoplaySpeed={2000}
-        autoplayHoverPause={false}
-        margin={50}
-    >
-        {initialCarouselItems.map(item => (
-            <SliderCard 
-                key={item.id}
-                img={item.img}
-                alt={item.alt}
-            />
-        ))}
-    </Carousel>
-)
+	<Carousel
+		animateOut='slideOutDown'
+		animateIn='flipInX'
+		items={1}
+		dots={false}
+		autoplay={false}
+		autoplayTimeout={2000}
+		autoplaySpeed={2000}
+		autoplayHoverPause={false}
+		margin={50}
+	>
+		{initialCarouselItems.map(item => (
+			<SliderCard
+				key={item.id}
+				img={item.img}
+			/>
+		))}
+	</Carousel>
+);
 
-export { InitialCarousel }
+export { InitialCarousel };

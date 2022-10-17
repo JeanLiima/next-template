@@ -30,7 +30,10 @@ jobs:
         run: npm i
 
       - name: Run linter
-        uses: wearerequired/lint-action@v2
+        uses: wearerequired/lint-action@v2.1.0
         with:
           eslint: true
-          auto_fix: true
+          eslint_extensions: 'js,jsx,ts,tsx'
+          eslint_auto_fix: true
+          eslint_args: ./src/
+          continue_on_error: false
