@@ -11,6 +11,7 @@
 		"editor.lineHeight": 18,
 		"files.eol": "\r\n",
 		"files.autoSave": "afterDelay",
+		"files.autoSaveDelay": 500,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": false,
 		"editor.detectIndentation": false,
@@ -23,7 +24,8 @@
 			"typescriptreact"
 		],
 		"editor.codeActionsOnSave": {
-			"source.fixAll.eslint": true
+			"source.fixAll.eslint": true,
+			"source.fixAll.stylelint": true
 		},
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 		"eslint.alwaysShowStatus": true,
