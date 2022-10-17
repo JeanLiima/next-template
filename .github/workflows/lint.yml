@@ -35,4 +35,5 @@ jobs:
           eslint: true
           eslint_extensions: 'js,jsx,ts,tsx'
           eslint_auto_fix: true
+          eslint_args: ./src/
           continue_on_error: false
