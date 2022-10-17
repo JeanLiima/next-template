@@ -29,14 +29,18 @@ jobs:
       - name: Install Node.js dependencies
         run: npm i
 
-      - name: Run linter
+      - name: Run linter to code
         uses: wearerequired/lint-action@v2.1.0
         with:
           eslint: true
           eslint_extensions: 'js,jsx,ts,tsx'
           eslint_auto_fix: true
           eslint_args: ./src/
-          styleslint: true
-          styleslint_extensions: 'scss'
-          styleslint_auto_fix: true
+          
+      - name: Run linter to styles
+        uses: wearerequired/lint-action@v2.1.0
+        with:
+          stylelint: true
+          stylelint_extensions: 'scss'
+          stylelint_auto_fix: true
           continue_on_error: false
