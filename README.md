@@ -7,21 +7,21 @@
 
   <p align="center">OCCRI Website</p>
   
-## Description
-
+## Project Structure
 ✔ Frontend: This is the front-end part of the project OCCRI System.    
 ✔ Backend: [Occri API](https://github.com/evaldorcardoso/api-occri)
 
-🛠️ Technologies:
+## Technologies
 - Next.js - An open-source web development framework created by Vercel.
 - Typescript - A strongly typed programming language.
 - OWL Carousel - An enabled jQuery plugin that lets you create responsive carousel sliders.
+- SCSS - A pre-processor scripting language that will be compiled or interpreted into CSS.
 
 ## Installation
 - Clone the repository.
 - Run `npm install` to download the dependencies.
 
-## Running the app
+## Running
 - First, run the development server:
 ```bash
 npm run dev
@@ -36,6 +36,9 @@ npm run test
 # or
 yarn test
 ```
+
+## Workflows
+- **[Lint: ](https://github.com/marketplace/actions/lint-action)** To run all the lints added in project (ESLint and Styleslint)
 
 ## Devs
 - Backend - [Evaldo R Cardoso](https://evaldorc.com.br/)
