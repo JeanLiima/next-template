@@ -1,58 +1,51 @@
 .events {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    width: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+	&__content {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: 42px 72px;
 
-        padding: 42px 72px;
-    
-        > h2 {
-            color: #806666;
-            margin: 0;
-            margin-bottom: 40px;
-        }
-    
-    }
+		> h2 {
+			color: #806666;
+			margin: 0;
+			margin-bottom: 40px;
+		}
+	}
 
-    &__container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        gap: 57px;
-    
-        width: 100%;
-    
-        &__description {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            width: 40%;
-    
-            > div > h1 {
-                color:#474747;
-                margin: 0;
-                margin-bottom: 16px;
-            }
+	&__container {
+		display: flex;
+		flex-flow: row nowrap;
+		gap: 57px;
+		width: 100%;
 
-            > div > p {
-                font-family: sans-serif;
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 150%;
-                color: #737373;
-                margin: 0;
-            }
-        }
-        
-        &__carousel {
-            width: 60%;
-        }
-    }
+		&__description {
+			display: flex;
+			flex-flow: column nowrap;
+			justify-content: space-between;
+			width: 40%;
+
+			> div > h1 {
+				color: #474747;
+				margin: 0;
+				margin-bottom: 16px;
+			}
+
+			> div > p {
+				font-family: sans-serif;
+				font-style: normal;
+				font-weight: 400;
+				font-size: 14px;
+				line-height: 150%;
+				color: #737373;
+				margin: 0;
+			}
+		}
+
+		&__carousel {
+			width: 60%;
+		}
+	}
 }

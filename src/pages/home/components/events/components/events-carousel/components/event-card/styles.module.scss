@@ -1,24 +1,20 @@
-$box-shadow: 0px 1px 2px rgba(231, 232, 239, 0.3), 0px 2px 6px rgba(159, 161, 164, 0.15);
+$box-shadow: 0 1px 2px rgb(231 232 239 / 30%), 0 2px 6px rgb(159 161 164 / 15%);
 
 .event-card {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-  
-    width: 100%;
-    height: 256px;
-    border-radius: 50%;
+	display: flex;
+	flex-flow: column nowrap;
+	width: 100%;
+	height: 256px;
+	border-radius: 50%;
+	box-shadow: $box-shadow;
 
-    box-shadow: $box-shadow;
+	&__image {
+		border-radius: 50%;
+		width: 100%;
+		height: 100%;
 
-    &__image {
-        border-radius: 50%;
-        width: 100%;
-        height: 100%;
-
-        img {
-            border-radius: 116px;
-        }
-    }
-
+		img {
+			border-radius: 116px;
+		}
+	}
 }
