@@ -33,6 +33,5 @@ jobs:
         uses: wearerequired/lint-action@v2
         with:
           eslint: true
-          extensions: 'ts,tsx'
-          annotations: true
-          auto_fix: true
+          eslint_extensionss: 'ts,tsx'
+          eslint_auto_fix: true
