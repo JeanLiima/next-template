@@ -28,5 +28,11 @@
 		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 		"eslint.alwaysShowStatus": true,
 		"eslint.format.enable": true,
+
+		//STYLESLINT
+		"css.validate": false,
+		"less.validate": false,
+		"scss.validate": false,
+		"stylelint.validate": ["css", "scss"]
 	},
 }
