@@ -1,5 +1,7 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require("path");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const StylelintPlugin = require("stylelint-webpack-plugin");
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
@@ -17,6 +19,7 @@ const nextConfig = {
 				"window.jQuery": "jquery",
 			})
 		);
+		config.plugins.push(new StylelintPlugin());
 		return config;
 	},
 	async redirects() {
