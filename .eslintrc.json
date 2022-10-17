@@ -21,22 +21,10 @@
         "@typescript-eslint/no-explicit-any": "error",
         "react/react-in-jsx-scope": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
-        "indent": [
-            "error",
-            "tab"
-        ],
-        "linebreak-style": [
-            "error",
-            "windows"
-        ],
-        "quotes": [
-            "error",
-            "double"
-        ],
-        "semi": [
-            "error",
-            "always"
-        ],
+        "indent": ["error", "tab"],
+        "linebreak-style": [0, "error", "windows"],
+        "quotes": ["error", "double"],
+        "semi": ["error", "always"],
         "no-console": [
             "error", 
             {
