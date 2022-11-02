@@ -1,1 +1,1 @@
-export { spacesApi } from "./spaces";
+export { exampleApi } from "./example";
