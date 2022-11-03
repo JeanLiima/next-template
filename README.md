@@ -5,17 +5,26 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">OCCRI Website</p>
+  <p align="center">Next template</p>
   
 ## Project Structure
-✔ Frontend: This is the front-end part of the project OCCRI System.    
-✔ Backend: [Occri API](https://github.com/evaldorcardoso/api-occri)
+✔ This template is to make website project.
 
-## Technologies
-- Next.js - An open-source web development framework created by Vercel.
+## Technologies contained
+- Next.js - An open-source web development framework created by Vercel usage to workflow the pages.
 - Typescript - A strongly typed programming language.
-- OWL Carousel - An enabled jQuery plugin that lets you create responsive carousel sliders.
 - SCSS - A pre-processor scripting language that will be compiled or interpreted into CSS.
+- ESlint - An open source project that helps you find and fix problems with your JavaScript code.
+- stylelint - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+
+## Git Hub Template
+- Workflows:
+    - Lint -  A action to run all the lint in the project
+
+- Issues:
+    - Bug report template - A template to open a bug report.
+    - Improvement request template - A template to open an improvement request.
+    - Technical debit request template - A template to open a technical debit request.
 
 ## Installation
 - Clone the repository.
@@ -40,6 +49,5 @@ yarn test
 ## Workflows
 - **[Lint: ](https://github.com/marketplace/actions/lint-action)** To run all the lints added in project (ESLint and Styleslint)
 
-## Devs
-- Backend - [Evaldo R Cardoso](https://evaldorc.com.br/)
+## Dev
 - Frontend - [Jean Lima](http://jean.dev.com.br/)
