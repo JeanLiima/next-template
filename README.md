@@ -8,7 +8,7 @@
   <p align="center">Next template</p>
   
 ## Project Structure
-✔ This template is to make website project.
+✔ This template is to start to make websites projects.
 
 ## Technologies contained
 - Next.js - An open-source web development framework created by Vercel usage to workflow the pages.
@@ -25,6 +25,11 @@
     - Bug report template - A template to open a bug report.
     - Improvement request template - A template to open an improvement request.
     - Technical debit request template - A template to open a technical debit request.
+    
+- Scripts:
+    - `npm run lint` - A script to verify lint in the project.
+    - `npm run style-lint` -  A script to verify style lint in the project.
+    - `npm run fix-lints` - A script to fix all the lints in the project.
 
 ## Installation
 - Clone the repository.
@@ -46,8 +51,5 @@ npm run test
 yarn test
 ```
 
-## Workflows
-- **[Lint: ](https://github.com/marketplace/actions/lint-action)** To run all the lints added in project (ESLint and Styleslint)
-
 ## Dev
-- Frontend - [Jean Lima](http://jean.dev.com.br/)
+- [Jean Lima](http://jean.dev.com.br/)
