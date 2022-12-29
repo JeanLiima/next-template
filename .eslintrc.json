@@ -4,32 +4,76 @@
         "es2021": true,
         "node": true
     },
-    "extends": [ 
+    "extends": [
         "next",
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended"
     ],
-    "overrides": [
-    ],
+    "overrides": [],
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        "simple-import-sort"
     ],
     "rules": {
         "@typescript-eslint/no-unused-vars": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "react/react-in-jsx-scope": "off",
-        "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
-        "indent": ["error", "tab"],
-        "linebreak-style": [0, "error", "windows"],
-        "quotes": ["error", "double"],
-        "semi": ["error", "always"],
-        "no-console": [
-            "error", 
+        "react/jsx-filename-extension": [
+            1,
             {
-                "allow": ["warn", "error"] 
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
             }
-        ]
+        ],
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "linebreak-style": [
+            0,
+            "error",
+            "windows"
+        ],
+        "quotes": [
+            "error",
+            "double"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-console": [
+            "error",
+            {
+                "allow": [
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "simple-import-sort/imports":[
+			"error",
+			{
+			  "groups": [
+				// Packages `next` and `react` related packages come first.
+				["^next", "^react", "^@?\\w"],
+				// Internal packages.
+				["^(@|assets)(/.*|$)", "^(@|pages)(/.*|$)", "^(@|components)(/.*|$)"],
+				// Side effect imports.
+				["^\\u0000"],
+				// Parent imports. Put `..` last.
+				["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+				// Other relative imports. Put same-folder imports and `.` last.
+				["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+				// Style imports.
+				["^.+\\.?(css)$", "^.+\\.?(scss)$"]
+			  ]
+			}
+		  ],
+        "simple-import-sort/exports": "error"
     }
 }
