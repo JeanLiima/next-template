@@ -1,7 +1,6 @@
-import { useEffect } from "react";
-
 import type { NextPage as INextPage } from "next";
 import Head from "next/head";
+import { useEffect } from "react";
 
 import { Footer } from "components/footer";
 
