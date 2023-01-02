@@ -5,9 +5,12 @@ const path = require("path");
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
-	pageExtensions: ["page.tsx", "page.ts"],
+	experimental: {
+		appDir: true,
+	},
 	sassOptions: {
 		includePaths: [path.join(__dirname, "styles")],
+		prependData: "@import \"~styles/variables.scss\";",
 	},
 	images: {
 		domains: ["https://bucket-occri.s3.amazonaws.com"],

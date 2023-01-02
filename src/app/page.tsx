@@ -1,6 +1,8 @@
+"use client";
+
 import type { NextPage as INextPage } from "next";
 
-import Home from "./home/index.page";
+import Home from "./home/page";
 
 const Default: INextPage = () => (
 	<Home />
