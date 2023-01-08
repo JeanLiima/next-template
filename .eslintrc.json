@@ -8,9 +8,18 @@
         "next",
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+		"plugin:storybook/recommended"
     ],
-    "overrides": [],
+    "overrides": [
+		{
+		  	"files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
+		  	"rules": {
+				"storybook/hierarchy-separator": "error",
+				"storybook/default-exports": "off"
+		  	}
+		}
+	],
     "plugins": [
         "react",
         "@typescript-eslint",
