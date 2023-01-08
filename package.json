@@ -9,7 +9,7 @@
     "lint": "eslint --ext js,jsx,ts,tsx",
     "style-lint": "stylelint \"**/*.scss\"",
     "fix-lints": "stylelint \"**/*.scss\" --fix && eslint --ext js,jsx,ts,tsx --fix",
-    "storybook": "start-storybook -p 6006 -s ./public",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
