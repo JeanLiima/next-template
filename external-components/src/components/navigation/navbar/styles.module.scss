@@ -1,0 +1,47 @@
+.navbar {
+	z-index: 1;
+	left: 0;
+	display: flex;
+	align-items: stretch;
+	height: 72px;
+	background #3d0cb3;
+	color: #f9f9f9;
+	box-shadow: 0 8px 12px rgb(0 0 0 / 20%);
+}
+
+.burguer {
+	z-index: 3;
+	right: 0;
+	display: grid;
+	place-items: center;
+	width: 72px;
+	height: 72px;
+	background-image: url();
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+body .open .burguer {
+	background-image: url();
+}
+
+@media (width >= 500px) {
+	.burguer { display: none; }	
+}
+
+button {
+	border: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	height: 100%;
+	background: transparent;
+	color: inherit;
+	font-family: "Euclid Circular A";
+	font-size: 14px;
+}
+
+@media (width >= 500px) {
+	button { font-size: 16px; }	
+}
