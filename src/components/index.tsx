@@ -1,1 +1,3 @@
-export * from "../../external-components/src/components";
+// import your library of component here.
+
+export { };
