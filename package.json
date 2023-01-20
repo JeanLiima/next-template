@@ -2,6 +2,27 @@
   "name": "next-template",
   "version": "2.0.0",
   "private": true,
+  "description": "A library with Next.js, typescript and SCSS",
+  "author": "Jean Lima <jean.car.liima@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "next",
+    "next.js",
+    "react",
+    "sass",
+    "scss",
+    "typescript",
+    "eslint",
+    "stylelint",
+    "template"
+  ],
+  "bugs": {
+    "url": "https://github.com/JeanLiima/next-template/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeanLiima/next-template.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

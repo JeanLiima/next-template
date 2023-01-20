@@ -6,6 +6,7 @@ const Home: INextPage = () => (
 	<div className={styles.container}>
 		<main className={styles.main}>
 			<div>
+				{/* Start your code here */}
 			</div>
 		</main>
 	</div>

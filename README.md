@@ -11,15 +11,16 @@
 ✔ This template is to start to make websites projects.
 
 ## Technologies contained
-- Next.js - An open-source web development framework created by Vercel usage to workflow the pages.
-- Typescript - A strongly typed programming language.
-- SCSS - A pre-processor scripting language that will be compiled or interpreted into CSS.
-- ESlint - An open source project that helps you find and fix problems with your JavaScript code.
-- stylelint - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+- [Next](https://www.npmjs.com/package/next) - An open-source web development framework created by Vercel usage to workflow the pages.
+- [Typescript](https://www.npmjs.com/package/typescript) - A strongly typed programming language.
+- [SCSS](https://www.npmjs.com/package/scss) - A pre-processor scripting language that will be compiled or interpreted into CSS.
+- [ESlint](https://www.npmjs.com/package/eslint) - An open source project that helps you find and fix problems with your JavaScript code.
+- [stylelint](https://www.npmjs.com/package/stylelint) - A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+- [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
 
 ## Git Hub Template
 - Workflows:
-    - Lint -  A action to run all the lint in the project
+    - [Lint](https://github.com/marketplace/actions/lint-action) -  A action to run all the lint in the project (Stylelint and eslint)
 
 - Issues:
     - Bug report template - A template to open a bug report.
