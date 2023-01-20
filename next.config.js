@@ -12,9 +12,6 @@ const nextConfig = {
 		includePaths: [path.join(__dirname, "styles")],
 		prependData: "@import \"styles/variables.scss\";",
 	},
-	images: {
-		domains: ["https://bucket-occri.s3.amazonaws.com"],
-	},
 	webpack: (config, { webpack }) => {
 		config.plugins.push(
 			new webpack.ProvidePlugin({
@@ -30,11 +27,6 @@ const nextConfig = {
 			{
 				source: "/home",
 				destination: "/",
-				permanent: true,
-			},
-			{
-				source: "/details",
-				destination: `/details/${process.env.NEXT_PUBLIC_DEFAULT_DETAILS_URL}`,
 				permanent: true,
 			},
 		];
