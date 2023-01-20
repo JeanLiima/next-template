@@ -8,18 +8,19 @@
         "next",
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:@typescript-eslint/recommended",
-		"plugin:storybook/recommended"
+        "plugin:@typescript-eslint/recommended"
     ],
     "overrides": [
-		{
-		  	"files": ["*.stories.@(ts|tsx|js|jsx|mjs|cjs)"],
-		  	"rules": {
-				"storybook/hierarchy-separator": "error",
-				"storybook/default-exports": "off"
-		  	}
-		}
-	],
+        {
+            "files": [
+                "*.stories.@(ts|tsx|js|jsx|mjs|cjs)"
+            ],
+            "rules": {
+                "storybook/hierarchy-separator": "error",
+                "storybook/default-exports": "off"
+            }
+        }
+    ],
     "plugins": [
         "react",
         "@typescript-eslint",
@@ -64,25 +65,45 @@
                 ]
             }
         ],
-        "simple-import-sort/imports":[
-			"error",
-			{
-			  "groups": [
-				// Packages `next` and `react` related packages come first.
-				["^next", "^react", "^@?\\w"],
-				// Internal packages.
-				["^(@|assets)(/.*|$)", "^(@|pages)(/.*|$)", "^(@|components)(/.*|$)"],
-				// Side effect imports.
-				["^\\u0000"],
-				// Parent imports. Put `..` last.
-				["^\\.\\.(?!/?$)", "^\\.\\./?$"],
-				// Other relative imports. Put same-folder imports and `.` last.
-				["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-				// Style imports.
-				["^.+\\.?(css)$", "^.+\\.?(scss)$"]
-			  ]
-			}
-		  ],
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    // Packages `next` and `react` related packages come first.
+                    [
+                        "^next",
+                        "^react",
+                        "^@?\\w"
+                    ],
+                    // Internal packages.
+                    [
+                        "^(@|assets)(/.*|$)",
+                        "^(@|pages)(/.*|$)",
+                        "^(@|components)(/.*|$)"
+                    ],
+                    // Side effect imports.
+                    [
+                        "^\\u0000"
+                    ],
+                    // Parent imports. Put `..` last.
+                    [
+                        "^\\.\\.(?!/?$)",
+                        "^\\.\\./?$"
+                    ],
+                    // Other relative imports. Put same-folder imports and `.` last.
+                    [
+                        "^\\./(?=.*/)(?!/?$)",
+                        "^\\.(?!/?$)",
+                        "^\\./?$"
+                    ],
+                    // Style imports.
+                    [
+                        "^.+\\.?(css)$",
+                        "^.+\\.?(scss)$"
+                    ]
+                ]
+            }
+        ],
         "simple-import-sort/exports": "error"
     }
 }
