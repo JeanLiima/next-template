@@ -10,7 +10,7 @@
 ## Project Structure
 ✔ This template is to start to make websites projects.
 
-## Technologies contained
+## Technologies
 - [Next](https://www.npmjs.com/package/next) - An open-source web development framework created by Vercel usage to workflow the pages.
 - [Typescript](https://www.npmjs.com/package/typescript) - A strongly typed programming language.
 - [SCSS](https://www.npmjs.com/package/scss) - A pre-processor scripting language that will be compiled or interpreted into CSS.
